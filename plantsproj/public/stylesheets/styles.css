@@ -1,0 +1,103 @@
+body {
+    /*    i want to put a comment in here*/
+    background: #000F4C  url("../images/Blue_Abstract_Wallpaper.png") repeat-x ;
+    font: bold 24px 'myawesomefont', helvetica,sans-serif;
+}
+nav {
+    background-color: #BB0000;
+}
+
+#maincontent {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #FFF;
+    height: 500px;
+    background-image: url("../images/contentbackground.jpg");
+    -webkit-box-shadow: 4px 5px 2px 4px ;
+    -moz-box-shadow: 4px 5px 2px 4px ;
+    box-shadow: 4px 5px 2px 4px ; 
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px; 
+    height: 1000px;
+    overflow: hidden;
+    
+    
+  
+}
+section {
+    float: left;
+    width: 600px;
+    background-color: #A0fE00;
+ 
+
+}
+
+aside {
+    float: left;
+    width: 300px;
+    background-color: #CC6600;
+   
+}
+
+.clear {
+    clear: both;
+}
+
+#navigation{
+margin: auto;
+}
+
+#navigation ul {
+text-align: center;
+list-style-type: none;
+height: 60px;
+width: 960px;
+margin: 0px;
+padding: 0px;
+border: #000F4C 1px solid;
+}
+
+#navigation ul li {
+float: left;
+}
+
+#navigation ul li a {
+
+background-image: linear-gradient(bottom, rgb(172,181,181) 14%, rgb(249,250,245) 69%, rgb(242,242,242) 79%);
+background-image: -o-linear-gradient(bottom, rgb(172,181,181) 14%, rgb(249,250,245) 69%, rgb(242,242,242) 79%);
+background-image: -moz-linear-gradient(bottom, rgb(172,181,181) 14%, rgb(249,250,245) 69%, rgb(242,242,242) 79%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,181,181) 14%, rgb(249,250,245) 69%, rgb(242,242,242) 79%);
+background-image: -ms-linear-gradient(bottom, rgb(172,181,181) 14%, rgb(249,250,245) 69%, rgb(242,242,242) 79%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.14, rgb(172,181,181)),
+	color-stop(0.69, rgb(249,250,245)),
+	color-stop(0.79, rgb(242,242,242)) );
+
+padding-right: 15px;
+padding-left: 15px;
+display: block;
+line-height: 59px;
+text-decoration: none;
+font-family: Georgia, "Times New Roman", Times, serif;
+font-size: 16px;
+color: #371C1C;
+}
+
+@font-face {
+    font-family: 'myawesomefont';
+    src: url('Candal-webfont.eot');
+    src: url('Candal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Candal-webfont.woff') format('woff'),
+         url('Candal-webfont.ttf') format('truetype'),
+         url('Candal-webfont.svg#CandalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plants</title>
+ <%= stylesheet_link_tag "styles" %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+ <div id="maincontent">
+           
+<div id="navigation">
+  <ul>
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+  </ul>
+</div>
+  <p style="color: green"><%= notice %></p>
+  <p style="color: red"><%= alert %></p>
+ 
+  <header id="topsection">Template Content for the whole site</header>
+  <section id="main_content"> <%= yield %></section>
+  <aside><p>right sidebar</p></aside>
+  <footer class="clear"><p>copyright</p></footer>
+  </div>
+
+  
+  
+</body>
+</html>

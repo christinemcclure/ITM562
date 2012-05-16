@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Commonname:</b>
+  <%= @plant.commonname %>
+</p>
+
+<p>
+  <b>Latinname:</b>
+  <%= @plant.latinname %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @plant.type %>
+</p>
+
+<p>
+  <b>Bloomstart:</b>
+  <%= @plant.bloomstart %>
+</p>
+
+<p>
+  <b>Bloomend:</b>
+  <%= @plant.bloomend %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @plant.active %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @plant.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plant_path %>

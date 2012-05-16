@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  commonname: MyString
+  latinname: MyString
+  type: MyString
+  bloomstart: MyString
+  bloomend: MyString
+  active: false
+  user: 
+
+two:
+  commonname: MyString
+  latinname: MyString
+  type: MyString
+  bloomstart: MyString
+  bloomend: MyString
+  active: false
+  user: 

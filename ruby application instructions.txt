@@ -1,0 +1,111 @@
+http://electric-ice-8535.heroku.com
+
+
+
+
+rails new <name>
+cd to directory
+
+
+
+open in editor
+open gemfile: directory root - make sure using rails 3.0.9. If not, try class 7 notes, or: gem update heroku
+	gem 'devise', '1.2.rc'
+	gem 'friendly_id', '3.2.1'
+	gem 'heroku', :group => :development
+
+
+
+
+
+bundle install - if problem: check file: 
+rails generate friendly_id
+rails generate controller home index
+
+
+
+
+remove index.html from Public folder
+edit config/routes.rb and replace 
+	get home/index 
+	with ""
+	root :to => "home#index"
+edit app/views/home/index.html.erb h1 tag to verify using new home page
+
+
+
+
+rails generate devise:install
+
+
+
+
+edit Configurations/Environment/Development
+#########DEV
+
+### ActionMailer Config
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+# A dummy setup for development - no deliveries, but logged
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = false
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default :charset => "utf-8"
+
+
+### PROD
+  ### ActionMailer Config
+config.action_mailer.default_url_options = { :host => 'host.com' }
+# A dummy setup for development - no deliveries, but logged
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = false
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.default :charset => "utf-8"
+	
+
+
+rails generate devise User
+
+rails generate scaffold Plant commonname:string latinname:string type:string bloomstart:string bloomend:string picture:binary active:boolean user:references
+
+
+
+Open Models/users.rb
+	add fields to attr_accessible:  :name, 
+	Add from val's code for validation and friendly id
+Add t.string :name to devise_create_users.rb
+
+
+
+rake db:create
+rake db:migrate
+
+
+Add to Models/user.rb
+	 has_many :plants, :dependent => :destroy
+
+Add to Models/plant.rb
+	validates_presence_of :commonname
+	add friendly id for common name
+
+
+rails generate devise:views
+
+
+Open views/devise/registrations edit and new and add
+	lable and field for name: f.name_field
+
+
+copy the Views / devise / menu folder from val's project
+
+modify devise registration views to include name field
+
+(copy user controller from cloudapp)
+
+(copy 'protected' code from signature controller to my controller)
+
+modify layouts application view to use partials from user menu
+
+
+
+
+
